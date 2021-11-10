@@ -1,0 +1,26 @@
+.newsletter {
+    background-color: var(--app-green);
+    border-radius: 20px 20px 0px 0px;
+}
+
+.social-icon {
+    font-size: 30px;
+    color: #ce582d;
+    padding-right: 8px;
+    transition: 0.4s ease-in;
+}
+.social-icon:hover {
+    transform: translateY(-5px);
+}
+
+.footer-links {
+    color: #6c757d;
+    text-decoration: none;
+}
+.footer-links:hover {
+    color: #ce582d;
+}
+
+.separate-line {
+    border: 1px solid white;
+}
