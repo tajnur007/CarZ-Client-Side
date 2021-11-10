@@ -38,11 +38,15 @@
 }
 
 
+:root {
+  --color-primary:#d13b04;
+}
+
 /* Custom CSS  */
 .btn-1 {
-  color: #d13b04;
+  color: var(--color-primary);
   background-color: transparent;
-  border: 2px solid #d13b04;
+  border: 2px solid var(--color-primary);
   font-weight: 500;
   padding: 10px 20px;
   border-radius: 5px;
@@ -50,6 +54,10 @@
 }
 .btn-1:hover {
   color: white;
-  background-color: #d13b04;
-  border: 2px solid #d13b04;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.txt-primary {
+  color: var(--color-primary);
 }
