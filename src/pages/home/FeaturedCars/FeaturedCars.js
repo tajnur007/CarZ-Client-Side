@@ -21,7 +21,7 @@ const FeaturedCars = () => {
 
             <Row xs={1} md={3} lg={3} className="g-4">
                 {
-                    myarr.map(value => <CarCard key="" value={cars[value]}></CarCard>)
+                    cars[0]?.name && myarr.map(value => <CarCard key="" value={cars[value]}></CarCard>)
                 }
             </Row>
 
