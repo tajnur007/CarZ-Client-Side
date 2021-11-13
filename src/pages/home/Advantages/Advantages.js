@@ -22,6 +22,7 @@ const Advantages = () => {
                         </p>
                     </div>
                 </div>
+
                 <div className="p-2 first-layer">
                     <div className="second-layer p-2">
                         <h1 className="pt-5">
@@ -33,6 +34,7 @@ const Advantages = () => {
                         </p>
                     </div>
                 </div>
+
                 <div className="p-2 first-layer">
                     <div className="second-layer p-2">
                         <h1 className="pt-5">
@@ -44,6 +46,7 @@ const Advantages = () => {
                         </p>
                     </div>
                 </div>
+
                 <div className="p-2 first-layer">
                     <div className="second-layer p-2">
                         <h1 className="pt-5">
