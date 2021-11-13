@@ -13,7 +13,7 @@ const Header = () => {
 
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="sticky-top shadow">
                 <Container>
                     {/* Company Image  */}
                     <div>
