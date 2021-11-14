@@ -14,7 +14,7 @@ const Dashboard = () => {
                     </Link>
                 </p>
                 <p className="dashboard-item">
-                    <Link className="dashboard-item-link" to="/dashboard/myOrders" >
+                    <Link className="dashboard-item-link" to="/dashboard/my-orders" >
                         My Orders
                     </Link>
                 </p>
