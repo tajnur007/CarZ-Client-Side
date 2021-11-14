@@ -61,3 +61,6 @@
 .txt-primary {
   color: var(--color-primary);
 }
+.txt-primary:hover {
+  color: var(--color-primary);
+}
