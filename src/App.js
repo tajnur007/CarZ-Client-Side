@@ -12,10 +12,10 @@ import Login from './pages/login/Login/Login';
 import MakeAdmin from './pages/makeAdmin/MakeAdmin/MakeAdmin';
 import ManageAllOrders from './pages/manageAllOrders/ManageAllOrders/ManageAllOrders';
 import ManageProducts from './pages/manageProducts/ManageProducts/ManageProducts';
-import MyOrders from './pages/myOrders/MyOrders/MyOrders';
-import Pay from './pages/pay/Pay/Pay';
 import Register from './pages/register/Register/Register';
-import Review from './pages/review/Review/Review';
+import MyOrders from './pages/dashboard/MyOrders/MyOrders';
+import Pay from './pages/dashboard/Pay/Pay';
+import Review from './pages/dashboard/Review/Review';
 
 function App() {
   return (
@@ -50,16 +50,16 @@ function App() {
           <Route exact path="/manage-products">
             <ManageProducts />
           </Route>
-          <Route exact path="/my-orders">
+          <Route exact path="/dashboard/my-orders">
             <MyOrders />
           </Route>
-          <Route exact path="/pay">
+          <Route exact path="/dashboard/pay">
             <Pay />
           </Route>
           <Route exact path="/register">
             <Register />
           </Route>
-          <Route exact path="/review">
+          <Route exact path="/dashboard/review">
             <Review />
           </Route>
         </Switch>
