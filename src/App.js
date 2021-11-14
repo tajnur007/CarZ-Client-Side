@@ -4,18 +4,18 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/home/Home/Home';
 import Header from './pages/shared/Header/Header';
 import Footer from './pages/shared/Footer/Footer';
-import AddProduct from './pages/addProduct/AddProduct/AddProduct';
 import Contact from './pages/contact/Contact/Contact';
 import Dashboard from './pages/dashboard/Dashboard/Dashboard';
 import ExploreCars from './pages/exploreCars/ExploreCars/ExploreCars';
 import Login from './pages/login/Login/Login';
-import MakeAdmin from './pages/makeAdmin/MakeAdmin/MakeAdmin';
-import ManageAllOrders from './pages/manageAllOrders/ManageAllOrders/ManageAllOrders';
-import ManageProducts from './pages/manageProducts/ManageProducts/ManageProducts';
 import Register from './pages/register/Register/Register';
 import MyOrders from './pages/dashboard/MyOrders/MyOrders';
 import Pay from './pages/dashboard/Pay/Pay';
 import Review from './pages/dashboard/Review/Review';
+import AddProduct from './pages/dashboard/AddProduct/AddProduct';
+import MakeAdmin from './pages/dashboard/MakeAdmin/MakeAdmin';
+import ManageAllOrders from './pages/dashboard/ManageAllOrders/ManageAllOrders';
+import ManageProducts from './pages/dashboard/ManageProducts/ManageProducts';
 
 function App() {
   return (
@@ -50,16 +50,16 @@ function App() {
           <Route exact path="/manage-products">
             <ManageProducts />
           </Route>
-          <Route exact path="/dashboard/my-orders">
+          <Route exact path="/my-orders">
             <MyOrders />
           </Route>
-          <Route exact path="/dashboard/pay">
+          <Route exact path="/pay">
             <Pay />
           </Route>
           <Route exact path="/register">
             <Register />
           </Route>
-          <Route exact path="/dashboard/review">
+          <Route exact path="/review">
             <Review />
           </Route>
         </Switch>
