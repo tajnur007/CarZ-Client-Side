@@ -3,6 +3,7 @@ import companyLogo from '../../../images/company/carz-logo-lg.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const formRef = useRef();
@@ -56,6 +57,8 @@ const Login = () => {
                                 <FontAwesomeIcon icon={faGoogle} /> Sign in with Google
                             </button>
                         </div>
+
+                        <p className="text-muted">Don't have an account? <Link to='/register' className="fw-bold text-dark">Register here</Link> </p>
 
                     </div>
 
