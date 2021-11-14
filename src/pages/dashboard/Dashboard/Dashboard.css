@@ -1,4 +1,18 @@
 .dashboard-container {
-    min-height: 90vh;
-    max-width: 100vh;
+    height: 90vh;
+}
+
+.side-menu {
+    height: 100%;
+}
+
+.dashboard-container a {
+    color: black;
+    font-weight: 700;
+    transition: all .3s;
+}
+.dashboard-container a:hover {
+    color: var(--color-primary);
+    font-size: 1.1em;
+    font-weight: 700;
 }

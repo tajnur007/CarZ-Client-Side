@@ -1,38 +1,38 @@
 import React from 'react';
 import './Dashboard.css';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import userIcon from '../../../images/others/user-icon.png';
 
 const Dashboard = () => {
-    const activeItem = {
-        fontWeight: "bold",
-        color: "#d13b04",
-        textDecoration: "none"
-    };
 
     return (
-        <div className="row dashboard-container">
-            <div className="col-4 p-3 border-end">
+        <div className="dashboard-container d-flex">
+            <div className="col-3 p-3 pt-5 side-menu border-end">
                 <p className="dashboard-item">
-                    <NavLink className="dashboard-item-link" exact to="/pay" activeStyle={activeItem} >
+                    <Link className="dashboard-item-link" to="/dashboard/pay" >
                         Pay
-                    </NavLink>
+                    </Link>
                 </p>
                 <p className="dashboard-item">
-                    <NavLink className="dashboard-item-link" exact to="/myOrders" activeStyle={activeItem} >
+                    <Link className="dashboard-item-link" to="/dashboard/myOrders" >
                         My Orders
-                    </NavLink>
+                    </Link>
                 </p>
                 <p className="dashboard-item">
-                    <NavLink className="dashboard-item-link" exact to="/review" activeStyle={activeItem} >
+                    <Link className="dashboard-item-link" to="/dashboard/review" >
                         Review
-                    </NavLink>
+                    </Link>
                 </p>
                 <div className="border-top mt-3 pt-3">
                     <button className="btn-1">Logout</button>
                 </div>
             </div>
-            <div className="col-8">
-
+            <div className="col-9 container pt-5">
+                <div><img src={userIcon} alt="" /></div>
+                <div>
+                    <h3>"Username Here"</h3>
+                    <p>Email: "Email Here"</p>
+                </div>
             </div>
 
         </div>
