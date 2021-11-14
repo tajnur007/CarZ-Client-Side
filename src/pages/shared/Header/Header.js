@@ -34,6 +34,9 @@ const Header = () => {
                                 <NavLink className="navItem" to="/contact" activeStyle={activeItem} >
                                     Contact
                                 </NavLink>
+                                <NavLink className="navItem" to="/dashboard" activeStyle={activeItem} >
+                                    Dashboard
+                                </NavLink>
                             </div>
                             <div className="border-start border-2 border-secondary ms-3">
                                 <NavLink className="navItem" to="/login" activeStyle={activeItem} >
