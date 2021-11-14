@@ -20,7 +20,7 @@ const Login = () => {
                 {/* Welcome Message  */}
                 <h2 className="my-3"> Sign Into Your Account </h2>
 
-                {/* Login / Signup Form  */}
+                {/* Login Form  */}
                 <form className="d-flex justify-content-center" ref={formRef}>
 
                     <div className="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-6">
@@ -42,7 +42,7 @@ const Login = () => {
 
                         </p>
 
-                        {/* Login / Signup Button  */}
+                        {/* Login Button  */}
                         <div className="form-group text-start mx-5">
                             <button onClick="" type="submit" className="btn-1 w-100 mb-4">
                                 <FontAwesomeIcon icon={faSignInAlt} /> Login
@@ -58,7 +58,7 @@ const Login = () => {
                             </button>
                         </div>
 
-                        <p className="text-muted">Don't have an account? <Link to='/register' className="fw-bold text-dark">Register here</Link> </p>
+                        <p className="text-muted">Don't have an account? <Link to='/register' className="fw-bold txt-primary">Register here</Link> </p>
 
                     </div>
 
