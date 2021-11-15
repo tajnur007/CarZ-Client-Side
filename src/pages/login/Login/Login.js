@@ -1,15 +1,24 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import companyLogo from '../../../images/company/carz-logo-lg.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
+    const { errorMsg, login, useGoogleAuth } = useAuth();
+
     const formRef = useRef();
     const emailRef = useRef();
     const passwordRef = useRef();
 
+    // Method for Email-Password Login
+    const handleEmailPasswordLogin = e => {
+        e.preventDefault();
+        login(emailRef.current.value, passwordRef.current.value);
+        formRef.current.reset();
+    }
 
     return (
         <div>
@@ -28,23 +37,23 @@ const Login = () => {
                         {/* Email Input  */}
                         <div className="form-group text-start mx-5 mb-3">
                             <label htmlFor="user_login">Email</label>
-                            <input type="email" className="form-control" ref={emailRef} placeholder="Email Address" required />
+                            <input type="email" className="form-control" ref={emailRef} placeholder="Email Address" />
                         </div>
 
                         {/* Password Input  */}
                         <div className="form-group text-start mx-5 mb-3">
                             <label htmlFor="user_pass">Password</label>
-                            <input type="password" className="form-control" ref={passwordRef} placeholder="Enter Password" required />
+                            <input type="password" className="form-control" ref={passwordRef} placeholder="Enter Password" />
                         </div>
 
                         {/* Error message  */}
                         <p className="text-start text-danger mx-5 mb-3">
-
+                            {errorMsg}
                         </p>
 
                         {/* Login Button  */}
                         <div className="form-group text-start mx-5">
-                            <button onClick="" type="submit" className="btn-1 w-100 mb-4">
+                            <button onClick={handleEmailPasswordLogin} type="submit" className="btn-1 w-100 mb-4">
                                 <FontAwesomeIcon icon={faSignInAlt} /> Login
                             </button>
                         </div>
@@ -53,7 +62,7 @@ const Login = () => {
 
                         {/* Google Login Button  */}
                         <div className="form-group text-start mx-5">
-                            <button onClick="" className="btn-1 py-2 w-100 mb-4">
+                            <button onClick={useGoogleAuth} className="btn-1 py-2 w-100 mb-4">
                                 <FontAwesomeIcon icon={faGoogle} /> Sign in with Google
                             </button>
                         </div>
