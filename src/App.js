@@ -16,6 +16,7 @@ import AddProduct from './pages/dashboard/AddProduct/AddProduct';
 import MakeAdmin from './pages/dashboard/MakeAdmin/MakeAdmin';
 import ManageAllOrders from './pages/dashboard/ManageAllOrders/ManageAllOrders';
 import ManageProducts from './pages/dashboard/ManageProducts/ManageProducts';
+import PrivateRoute from './pages/shared/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -26,42 +27,42 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/add-product">
+          <PrivateRoute exact path="/add-product">
             <AddProduct />
-          </Route>
+          </PrivateRoute>
           <Route exact path="/contact">
             <Contact />
           </Route>
-          <Route exact path="/dashboard">
+          <PrivateRoute exact path="/dashboard">
             <Dashboard />
-          </Route>
+          </PrivateRoute>
           <Route exact path="/explore-cars">
             <ExploreCars />
           </Route>
           <Route exact path="/login">
             <Login />
           </Route>
-          <Route exact path="/make-admin">
+          <PrivateRoute exact path="/make-admin">
             <MakeAdmin />
-          </Route>
-          <Route exact path="/manage-all-orders">
+          </PrivateRoute>
+          <PrivateRoute exact path="/manage-all-orders">
             <ManageAllOrders />
-          </Route>
-          <Route exact path="/manage-products">
+          </PrivateRoute>
+          <PrivateRoute exact path="/manage-products">
             <ManageProducts />
-          </Route>
-          <Route exact path="/my-orders">
+          </PrivateRoute>
+          <PrivateRoute exact path="/my-orders">
             <MyOrders />
-          </Route>
-          <Route exact path="/pay">
+          </PrivateRoute>
+          <PrivateRoute exact path="/pay">
             <Pay />
-          </Route>
+          </PrivateRoute>
           <Route exact path="/register">
             <Register />
           </Route>
-          <Route exact path="/review">
+          <PrivateRoute exact path="/review">
             <Review />
-          </Route>
+          </PrivateRoute>
         </Switch>
         <Footer />
       </Router>
