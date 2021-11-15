@@ -3,8 +3,11 @@ import './Header.css';
 import { Container, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import companyImage from '../../../images/company/carz-logo-md.png';
+import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
+    const { user, logout } = useAuth();
+
     const activeItem = {
         fontWeight: "bold",
         color: "#d13b04",
@@ -34,14 +37,29 @@ const Header = () => {
                                 <NavLink className="navItem" to="/contact" activeStyle={activeItem} >
                                     Contact
                                 </NavLink>
-                                <NavLink className="navItem" to="/dashboard" activeStyle={activeItem} >
-                                    Dashboard
-                                </NavLink>
+
+                                {/* Dashboard  */}
+                                {
+                                    user.email ? <NavLink className="navItem" to="/dashboard" activeStyle={activeItem} >
+                                        Dashboard
+                                    </NavLink> : ''
+                                }
                             </div>
                             <div className="border-start border-2 border-secondary ms-3">
-                                <NavLink className="navItem" to="/login" activeStyle={activeItem} >
-                                    Login
-                                </NavLink>
+                                {/* User Name  */}
+                                {
+                                    user.email ? <span className="text-primary px-2">{user.displayName}</span> : ''
+                                }
+
+                                {/* Logout Button or Login Link  */}
+                                {
+                                    user.email ?
+                                        <button onClick={logout} className="btn-1 py-1 px-2">Logout</button>
+                                        :
+                                        <NavLink className="navItem" to="/login" activeStyle={activeItem} >
+                                            Login
+                                        </NavLink>
+                                }
                             </div>
                         </div>
                     </Navbar.Collapse>
