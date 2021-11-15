@@ -3,13 +3,22 @@ import companyLogo from '../../../images/company/carz-logo-lg.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
+    const { errorMsg, createAccount } = useAuth();
 
     const formRef = useRef();
     const nameRef = useRef();
     const emailRef = useRef();
     const passwordRef = useRef();
+
+    // Method for Email-Password Signup
+    const handleEmailPasswordRegister = e => {
+        e.preventDefault();
+        createAccount(nameRef.current.value, emailRef.current.value, passwordRef.current.value);
+        formRef.current.reset();
+    }
 
     return (
         <div>
@@ -44,12 +53,12 @@ const Register = () => {
 
                         {/* Error message  */}
                         <p className="text-start text-danger mx-5 mb-3">
-
+                            {errorMsg}
                         </p>
 
                         {/* Registration Button  */}
                         <div className="form-group text-start mx-5">
-                            <button onClick="" type="submit" className="btn-1 w-100 mb-4">
+                            <button onClick={handleEmailPasswordRegister} type="submit" className="btn-1 w-100 mb-4">
                                 <FontAwesomeIcon icon={faUserPlus} /> Register
                             </button>
                         </div>
