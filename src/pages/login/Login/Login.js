@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { useHistory, useLocation } from 'react-router';
 import companyLogo from '../../../images/company/carz-logo-lg.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
@@ -7,7 +8,11 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
-    const { errorMsg, login, useGoogleAuth } = useAuth();
+    const { setUser, errorMsg, setErrorMsg, login, googleLogin } = useAuth();
+
+    let history = useHistory();
+    const location = useLocation();
+    const redirect_uri = location.state?.from?.pathname || '/';
 
     const formRef = useRef();
     const emailRef = useRef();
@@ -16,8 +21,31 @@ const Login = () => {
     // Method for Email-Password Login
     const handleEmailPasswordLogin = e => {
         e.preventDefault();
-        login(emailRef.current.value, passwordRef.current.value);
+
+        login(emailRef.current.value, passwordRef.current.value)
+            .then((userCredential) => {
+                setErrorMsg('');
+                history.push(redirect_uri);
+            })
+            .catch((error) => {
+                setErrorMsg(error.message);
+            });
+
         formRef.current.reset();
+    }
+
+    // Method for Google Login
+    const handleGoogleLogin = e => {
+        e.preventDefault();
+
+        googleLogin()
+            .then((result) => {
+                setUser(result.user);
+                setErrorMsg('');
+                history.push(redirect_uri);
+            }).catch((error) => {
+                setErrorMsg(error.message);
+            });
     }
 
     return (
@@ -62,7 +90,7 @@ const Login = () => {
 
                         {/* Google Login Button  */}
                         <div className="form-group text-start mx-5">
-                            <button onClick={useGoogleAuth} className="btn-1 py-2 w-100 mb-4">
+                            <button onClick={handleGoogleLogin} className="btn-1 py-2 w-100 mb-4">
                                 <FontAwesomeIcon icon={faGoogle} /> Sign in with Google
                             </button>
                         </div>

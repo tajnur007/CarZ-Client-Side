@@ -23,16 +23,10 @@ const useFirebase = () => {
     }, [auth]);
 
     // Google Login Authentication 
-    const useGoogleAuth = () => {
+    const googleLogin = () => {
         const provider = new GoogleAuthProvider();
 
-        signInWithPopup(auth, provider)
-            .then((result) => {
-                setUser(result.user);
-                setErrorMsg('');
-            }).catch((error) => {
-                setErrorMsg(error.message);
-            });
+        return signInWithPopup(auth, provider);
     }
 
     // Create Account Process Using Email and Password 
@@ -58,13 +52,7 @@ const useFirebase = () => {
 
     // Login Process Using Email and Password 
     const login = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                setErrorMsg('');
-            })
-            .catch((error) => {
-                setErrorMsg(error.message);
-            });
+        return signInWithEmailAndPassword(auth, email, password);
     }
 
     // Logout Process For All Login
@@ -80,11 +68,13 @@ const useFirebase = () => {
     // Data Sending 
     return {
         user,
+        setUser,
         errorMsg,
+        setErrorMsg,
         logout,
         login,
         createAccount,
-        useGoogleAuth
+        googleLogin
     };
 };
 
