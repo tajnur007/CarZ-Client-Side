@@ -18,6 +18,7 @@ import ManageAllOrders from './pages/dashboard/ManageAllOrders/ManageAllOrders';
 import ManageProducts from './pages/dashboard/ManageProducts/ManageProducts';
 import PrivateRoute from './pages/shared/PrivateRoute/PrivateRoute';
 import AuthProvider from './contexts/AuthProvider';
+import AdminPrivateRoute from './pages/shared/AdminPrivateRoute/AdminPrivateRoute';
 
 function App() {
   return (
@@ -29,42 +30,42 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <PrivateRoute exact path="/add-product">
-              <AddProduct />
-            </PrivateRoute>
             <Route exact path="/contact">
               <Contact />
             </Route>
-            <PrivateRoute exact path="/dashboard">
-              <Dashboard />
-            </PrivateRoute>
             <Route exact path="/explore-cars">
               <ExploreCars />
             </Route>
             <Route exact path="/login">
               <Login />
             </Route>
-            <PrivateRoute exact path="/make-admin">
-              <MakeAdmin />
-            </PrivateRoute>
-            <PrivateRoute exact path="/manage-all-orders">
-              <ManageAllOrders />
-            </PrivateRoute>
-            <PrivateRoute exact path="/manage-products">
-              <ManageProducts />
-            </PrivateRoute>
-            <PrivateRoute exact path="/my-orders">
-              <MyOrders />
+            <Route exact path="/register">
+              <Register />
+            </Route>
+            <PrivateRoute exact path="/dashboard">
+              <Dashboard />
             </PrivateRoute>
             <PrivateRoute exact path="/pay">
               <Pay />
             </PrivateRoute>
-            <Route exact path="/register">
-              <Register />
-            </Route>
+            <PrivateRoute exact path="/my-orders">
+              <MyOrders />
+            </PrivateRoute>
             <PrivateRoute exact path="/review">
               <Review />
             </PrivateRoute>
+            <AdminPrivateRoute exact path="/add-product">
+              <AddProduct />
+            </AdminPrivateRoute>
+            <AdminPrivateRoute exact path="/make-admin">
+              <MakeAdmin />
+            </AdminPrivateRoute>
+            <AdminPrivateRoute exact path="/manage-all-orders">
+              <ManageAllOrders />
+            </AdminPrivateRoute>
+            <AdminPrivateRoute exact path="/manage-products">
+              <ManageProducts />
+            </AdminPrivateRoute>
           </Switch>
           <Footer />
         </Router>
