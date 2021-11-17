@@ -7,7 +7,7 @@ const ExploreCars = () => {
     const [cars, setCars] = useState([]);
 
     useEffect(() => {
-        fetch('./fakedb.json')
+        fetch('http://localhost:7007/products')
             .then(resp => resp.json())
             .then(data => setCars(data))
 
