@@ -7,106 +7,183 @@
         "year": 2021,
         "fuel": "Petrol",
         "type": "Sport",
-        "color": "Black",
-        "image": "https://storage.googleapis.com/theme-vessel-items/checking-sites/cmart-2-html/HTML/main/img/car/car-8.jpg"
+        "color": "Sky Blue",
+        "image": "https://i.ibb.co/164Z8vG/car-1.jpg"
     },
     {
         "name": "Red Lamborghini",
-        "price": 320500,
-        "speed": 280,
+        "price": 390500,
+        "speed": 380,
         "mode": "Manual",
         "year": 2021,
         "fuel": "Petrol",
         "type": "Sport",
-        "color": "Black",
-        "image": "https://storage.googleapis.com/theme-vessel-items/checking-sites/cmart-2-html/HTML/main/img/car/car-8.jpg"
+        "color": "Red",
+        "image": "https://i.ibb.co/zfFLYFH/car-2.jpg"
     },
     {
-        "name": "Orange lamborghini",
-        "price": 320500,
-        "speed": 280,
-        "mode": "Manual",
+        "name": "Lamborghini Diablo",
+        "price": 350500,
+        "speed": 320,
+        "mode": "Both",
         "year": 2021,
         "fuel": "Petrol",
         "type": "Sport",
-        "color": "Black",
-        "image": "https://storage.googleapis.com/theme-vessel-items/checking-sites/cmart-2-html/HTML/main/img/car/car-8.jpg"
+        "color": "Orange",
+        "image": "https://i.ibb.co/DG68JgC/car-3.jpg"
     },
     {
-        "name": "BMW m6",
-        "price": 320500,
+        "name": "Ford F-150 Raptor",
+        "price": 290500,
         "speed": 280,
-        "mode": "Manual",
+        "mode": "Auto",
         "year": 2021,
         "fuel": "Petrol",
         "type": "Sport",
         "color": "Black",
-        "image": "https://storage.googleapis.com/theme-vessel-items/checking-sites/cmart-2-html/HTML/main/img/car/car-8.jpg"
+        "image": "https://i.ibb.co/KxzSQTw/car-4.jpg"
     },
     {
-        "name": "BMW m6",
-        "price": 320500,
-        "speed": 280,
+        "name": "Ferrari Testarossa",
+        "price": 330500,
+        "speed": 310,
         "mode": "Manual",
         "year": 2021,
         "fuel": "Petrol",
         "type": "Sport",
-        "color": "Black",
-        "image": "https://storage.googleapis.com/theme-vessel-items/checking-sites/cmart-2-html/HTML/main/img/car/car-8.jpg"
+        "color": "Yellow",
+        "image": "https://i.ibb.co/184Nyzf/car-5.png"
     },
     {
-        "name": "BMW m6",
-        "price": 320500,
+        "name": "Porsche 911 Carrera",
+        "price": 250500,
         "speed": 280,
         "mode": "Manual",
         "year": 2021,
         "fuel": "Petrol",
         "type": "Sport",
-        "color": "Black",
-        "image": "https://storage.googleapis.com/theme-vessel-items/checking-sites/cmart-2-html/HTML/main/img/car/car-8.jpg"
+        "color": "Green",
+        "image": "https://i.ibb.co/wwjq0kC/car-6.png"
     },
     {
-        "name": "BMW m6",
-        "price": 320500,
+        "name": "Jensen Interceptor",
+        "price": 270500,
         "speed": 280,
         "mode": "Manual",
         "year": 2021,
         "fuel": "Petrol",
         "type": "Sport",
-        "color": "Black",
-        "image": "https://storage.googleapis.com/theme-vessel-items/checking-sites/cmart-2-html/HTML/main/img/car/car-8.jpg"
+        "color": "Red",
+        "image": "https://i.ibb.co/KLr3YCB/car-7.png"
     },
     {
-        "name": "BMW m6",
-        "price": 320500,
+        "name": "Lamborghini Huracan",
+        "price": 300500,
         "speed": 280,
         "mode": "Manual",
         "year": 2021,
         "fuel": "Petrol",
         "type": "Sport",
-        "color": "Black",
-        "image": "https://storage.googleapis.com/theme-vessel-items/checking-sites/cmart-2-html/HTML/main/img/car/car-8.jpg"
+        "color": "Chocolate",
+        "image": "https://i.ibb.co/VTZnZ9T/car-8.png"
     },
     {
-        "name": "BMW m6",
-        "price": 320500,
+        "name": "Ferrari 812 Superfast",
+        "price": 340500,
         "speed": 280,
         "mode": "Manual",
         "year": 2021,
         "fuel": "Petrol",
         "type": "Sport",
         "color": "Black",
-        "image": "https://storage.googleapis.com/theme-vessel-items/checking-sites/cmart-2-html/HTML/main/img/car/car-8.jpg"
+        "image": "https://i.ibb.co/CVRnn0Z/car-9.png"
     },
     {
-        "name": "BMW m6",
+        "name": "Jeep Gladiator",
         "price": 320500,
         "speed": 280,
         "mode": "Manual",
         "year": 2021,
         "fuel": "Petrol",
         "type": "Sport",
+        "color": "Silver",
+        "image": "https://i.ibb.co/VpnZf63/car-10.png"
+    },
+    {
+        "name": "Land Rover Defender",
+        "price": 330500,
+        "speed": 280,
+        "mode": "Manual",
+        "year": 2021,
+        "fuel": "Petrol",
+        "type": "Sport",
         "color": "Black",
-        "image": "https://storage.googleapis.com/theme-vessel-items/checking-sites/cmart-2-html/HTML/main/img/car/car-8.jpg"
+        "image": "https://i.ibb.co/vL2F23c/car-11.png"
+    },
+    {
+        "name": "Rolls-Royce Wraith",
+        "price": 220500,
+        "speed": 280,
+        "mode": "Manual",
+        "year": 2021,
+        "fuel": "Petrol",
+        "type": "Sport",
+        "color": "Ash",
+        "image": "https://i.ibb.co/F6kf8bz/car-12.png"
+    },
+    {
+        "name": "Suzuki Samurai",
+        "price": 260500,
+        "speed": 280,
+        "mode": "Manual",
+        "year": 2021,
+        "fuel": "Petrol",
+        "type": "Sport",
+        "color": "White",
+        "image": "https://i.ibb.co/z7c0j50/car-13.png"
+    },
+    {
+        "name": "Volkswagen Beetle",
+        "price": 310500,
+        "speed": 280,
+        "mode": "Manual",
+        "year": 2021,
+        "fuel": "Petrol",
+        "type": "Sport",
+        "color": "Black",
+        "image": "https://i.ibb.co/MgDCRxs/car-14.png"
+    },
+    {
+        "name": "Dodge Viper",
+        "price": 340500,
+        "speed": 280,
+        "mode": "Manual",
+        "year": 2021,
+        "fuel": "Petrol",
+        "type": "Sport",
+        "color": "Yellow",
+        "image": "https://i.ibb.co/cXjy55N/car-15.png"
+    },
+    {
+        "name": "McLaren Senna",
+        "price": 320500,
+        "speed": 280,
+        "mode": "Manual",
+        "year": 2021,
+        "fuel": "Petrol",
+        "type": "Sport",
+        "color": "White",
+        "image": "https://i.ibb.co/Ksby1w2/car-16.png"
+    },
+    {
+        "name": "Ford Cortina",
+        "price": 320500,
+        "speed": 280,
+        "mode": "Manual",
+        "year": 2021,
+        "fuel": "Petrol",
+        "type": "Sport",
+        "color": "Yellow",
+        "image": "https://i.ibb.co/WKXGJjt/car-17.png"
     }
 ]
