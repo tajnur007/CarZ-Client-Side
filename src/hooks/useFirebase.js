@@ -44,6 +44,22 @@ const useFirebase = () => {
                 }).catch((err) => {
                     setErrorMsg(err.message);
                 });
+
+                // User Info Send to Database 
+                const newUser = { name, email };
+                fetch('http://localhost:7007/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(newUser)
+                })
+                    .then(resp => resp.json())
+                    .then(data => {
+                        if (data.insertedId) {
+                            alert('Your registration successfully completed. Please visit to login page.');
+                        }
+                    })
             })
             .catch((error) => {
                 setErrorMsg(error.message);
