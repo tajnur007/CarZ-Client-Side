@@ -5,23 +5,7 @@ import userIcon from '../../../images/others/user-icon.png';
 import useAuth from '../../../hooks/useAuth';
 
 const Dashboard = () => {
-    const { user } = useAuth();
-    const [isAdmin, setIsAdmin] = useState();
-
-    useEffect(() => {
-        const data = { email: user.email };
-        fetch('http://localhost:7007/isAdmin', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-            .then(resp => resp.json())
-            .then(data => setIsAdmin(data.isAdmin))
-
-        console.log(isAdmin);
-    }, [isAdmin, user.email])
+    const { user, isAdmin } = useAuth();
 
     return (
         <div className="dashboard-container d-flex">

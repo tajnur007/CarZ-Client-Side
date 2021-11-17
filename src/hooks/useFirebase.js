@@ -10,6 +10,7 @@ const useFirebase = () => {
     // All States 
     const [user, setUser] = useState({});
     const [errorMsg, setErrorMsg] = useState('');
+    const [isAdmin, setIsAdmin] = useState();
 
     const auth = getAuth();
 
@@ -21,6 +22,22 @@ const useFirebase = () => {
             }
         })
     }, [auth]);
+
+    // Checking The User Is An Admin Or Not 
+    useEffect(() => {
+        const data = { email: user.email };
+        fetch('http://localhost:7007/isAdmin', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(resp => resp.json())
+            .then(data => setIsAdmin(data.isAdmin))
+
+        console.log(isAdmin);
+    }, [isAdmin, user.email]);
 
     // Google Login Authentication 
     const googleLogin = () => {
@@ -85,6 +102,7 @@ const useFirebase = () => {
     return {
         user,
         setUser,
+        isAdmin,
         errorMsg,
         setErrorMsg,
         logout,
