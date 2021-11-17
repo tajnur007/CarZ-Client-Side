@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Dashboard.css';
 import { Link } from 'react-router-dom';
 import userIcon from '../../../images/others/user-icon.png';
 import useAuth from '../../../hooks/useAuth';
 
 const Dashboard = () => {
-    const { user, isAdmin } = useAuth();
+    const { user, isAdmin, logout } = useAuth();
 
     return (
         <div className="dashboard-container d-flex">
@@ -70,7 +70,7 @@ const Dashboard = () => {
 
                 {/* Logout Button  */}
                 <div className="border-top mt-3 pt-3">
-                    <button className="btn-1">Logout</button>
+                    <button onClick={logout} className="btn-1">Logout</button>
                 </div>
             </div>
 
