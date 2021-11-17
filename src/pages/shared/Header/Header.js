@@ -54,7 +54,7 @@ const Header = () => {
                                 {/* Logout Button or Login Link  */}
                                 {
                                     user.email ?
-                                        <button onClick={logout} className="btn-1 py-1 px-2">Logout</button>
+                                        <button onClick={logout} className="btn-1 py-0 px-3">Logout</button>
                                         :
                                         <NavLink className="navItem" to="/login" activeStyle={activeItem} >
                                             Login

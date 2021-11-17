@@ -70,7 +70,7 @@ const Dashboard = () => {
 
                 {/* Logout Button  */}
                 <div className="border-top mt-3 pt-3">
-                    <button onClick={logout} className="btn-1">Logout</button>
+                    <button onClick={logout} className="btn-1 py-1">Logout</button>
                 </div>
             </div>
 
