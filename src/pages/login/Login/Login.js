@@ -42,6 +42,20 @@ const Login = () => {
             .then((result) => {
                 setUser(result.user);
                 setErrorMsg('');
+
+                // User Info Send to Database 
+                const name = result.user.displayName;
+                const email = result.user.email;
+                const newUser = { name, email };
+                fetch('http://localhost:7007/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(newUser)
+                })
+
+                // Redirect Process
                 history.push(redirect_uri);
             }).catch((error) => {
                 setErrorMsg(error.message);
