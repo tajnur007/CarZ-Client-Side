@@ -3,12 +3,12 @@ import { Redirect, Route } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
 
 const AdminPrivateRoute = ({ children, ...rest }) => {
-    const { user } = useAuth();
+    const { user, isAdmin } = useAuth();
     return (
         <Route
             {...rest}
             render={({ location }) =>
-                user.role ? (
+                user.email && isAdmin ? (
                     children
                 ) : (
                     <Redirect
