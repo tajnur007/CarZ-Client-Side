@@ -6,7 +6,7 @@ const Reviews = () => {
     const [reviews, setReviews] = useState({});
 
     useEffect(() => {
-        fetch('./review.json')
+        fetch('http://localhost:7007/reviews')
             .then(resp => resp.json())
             .then(data => setReviews(data))
 
@@ -18,7 +18,7 @@ const Reviews = () => {
             <h1 className="text-light">CUSTOMER REVIEWS</h1>
             <div className=" container d-flex flex-nowrap review-container">
                 {
-                    reviews[0]?.name && reviews.map(data => <ReviewCard key="" value={data}></ReviewCard>)
+                    reviews[0]?.name && reviews.map(data => <ReviewCard key={data._id} value={data}></ReviewCard>)
                     // reviews[0]?.name && reviews.map(data => console.log(data))
                 }
 
