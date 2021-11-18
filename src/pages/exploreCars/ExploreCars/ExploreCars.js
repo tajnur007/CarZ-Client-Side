@@ -12,8 +12,11 @@ const ExploreCars = () => {
             .then(resp => resp.json())
             .then(data => setCars(data))
 
+    }, []);
+
+    useEffect(() => {
         setFilteredCars(cars.filter(car => car.status === 'Available'));
-    }, [cars]);
+    }, [cars])
 
 
     return (
@@ -26,7 +29,7 @@ const ExploreCars = () => {
             <div className="container">
                 <Row xs={1} md={3} lg={3} className="g-4">
                     {
-                        filteredCars.map(data => <CarCard key="" value={data}></CarCard>)
+                        filteredCars.map(car => <CarCard key={car._id} value={car}></CarCard>)
                     }
                 </Row>
             </div>
