@@ -19,6 +19,7 @@ import ManageProducts from './pages/dashboard/ManageProducts/ManageProducts';
 import PrivateRoute from './pages/shared/PrivateRoute/PrivateRoute';
 import AuthProvider from './contexts/AuthProvider';
 import AdminPrivateRoute from './pages/shared/AdminPrivateRoute/AdminPrivateRoute';
+import Purchase from './pages/purchase/Purchase/Purchase';
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
             </Route>
             <Route exact path="/register">
               <Register />
+            </Route>
+            <Route exact path="/purchase">
+              <Purchase />
             </Route>
             <PrivateRoute exact path="/dashboard">
               <Dashboard />
