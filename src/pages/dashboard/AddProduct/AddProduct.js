@@ -15,6 +15,7 @@ const AddProduct = () => {
     const typeRef = useRef();
     const colorRef = useRef();
     const imageRef = useRef();
+    const statusRef = useRef();
 
     console.log(user);
 
@@ -29,9 +30,10 @@ const AddProduct = () => {
         const type = typeRef.current.value;
         const color = colorRef.current.value;
         const image = imageRef.current.value;
+        const status = statusRef.current.value;
 
         // Sending Product Info to Database 
-        const newCar = { name, price, speed, mode, year, fuel, type, color, image };
+        const newCar = { name, price, speed, mode, year, fuel, type, color, image, status };
         const idToken = localStorage.getItem('idToken');
         fetch(`http://localhost:7007/addProduct?email=${user.email}`, {
             method: 'POST',
@@ -129,6 +131,16 @@ const AddProduct = () => {
                     <div className="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
                         <input type="text" className="form-control w-98" id="floatingInput" placeholder=" " ref={imageRef} />
                         <label for="floatingInput">Car Image Link</label>
+                    </div>
+
+                    {/* Available Status  */}
+                    <div class="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
+                        <select class="form-select w-98" id="floatingSelectGrid" ref={statusRef}>
+                            <option selected> --- Select One --- </option>
+                            <option value="Available">Available</option>
+                            <option value="Not Available">Not Available</option>
+                        </select>
+                        <label for="floatingSelectGrid">Available Status</label>
                     </div>
                 </div>
 
