@@ -7,7 +7,7 @@ const FeaturedCars = () => {
     const myarr = [0, 1, 2, 3, 4, 5];
 
     useEffect(() => {
-        fetch('./fakedb.json')
+        fetch('http://localhost:7007/products')
             .then(resp => resp.json())
             .then(data => setCars(data))
 
@@ -21,7 +21,7 @@ const FeaturedCars = () => {
 
             <Row xs={1} md={3} lg={3} className="g-4">
                 {
-                    cars[0]?.name && myarr.map(value => <CarCard key="" value={cars[value]}></CarCard>)
+                    cars[0]?.name && myarr.map(value => <CarCard key={cars[value]._id} value={cars[value]}></CarCard>)
                 }
             </Row>
 
