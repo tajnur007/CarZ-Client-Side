@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import ManageProductsData from './ManageProductsData';
 
 const ManageProducts = () => {
+    const [cars, setCars] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:7007/products')
+            .then(resp => resp.json())
+            .then(data => setCars(data))
+
+    }, []);
+
     return (
         <div className="container my-5">
             <h1 className="txt-primary pb-3">MANAGE PRODUCTS</h1>
@@ -13,13 +23,9 @@ const ManageProducts = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Lambourgini</td>
-                        <td>Available/Not Available</td>
-                        <td>
-                            <button className="btn btn-danger" >Delete Product</button>
-                        </td>
-                    </tr>
+                    {
+                        cars.map(car => <ManageProductsData key={car._id} value={car} />)
+                    }
                 </tbody>
             </table>
         </div>
