@@ -8,7 +8,8 @@
         "fuel": "Petrol",
         "type": "Sport",
         "color": "Sky Blue",
-        "image": "https://i.ibb.co/164Z8vG/car-1.jpg"
+        "image": "https://i.ibb.co/164Z8vG/car-1.jpg",
+        "status": "Available"
     },
     {
         "name": "Red Lamborghini",
@@ -19,7 +20,8 @@
         "fuel": "Petrol",
         "type": "Sport",
         "color": "Red",
-        "image": "https://i.ibb.co/zfFLYFH/car-2.jpg"
+        "image": "https://i.ibb.co/zfFLYFH/car-2.jpg",
+        "status": "Available"
     },
     {
         "name": "Lamborghini Diablo",
@@ -30,7 +32,8 @@
         "fuel": "Petrol",
         "type": "Sport",
         "color": "Orange",
-        "image": "https://i.ibb.co/DG68JgC/car-3.jpg"
+        "image": "https://i.ibb.co/DG68JgC/car-3.jpg",
+        "status": "Available"
     },
     {
         "name": "Ford F-150 Raptor",
@@ -41,7 +44,8 @@
         "fuel": "Petrol",
         "type": "Sport",
         "color": "Black",
-        "image": "https://i.ibb.co/KxzSQTw/car-4.jpg"
+        "image": "https://i.ibb.co/KxzSQTw/car-4.jpg",
+        "status": "Available"
     },
     {
         "name": "Ferrari Testarossa",
@@ -52,7 +56,8 @@
         "fuel": "Petrol",
         "type": "Sport",
         "color": "Yellow",
-        "image": "https://i.ibb.co/184Nyzf/car-5.png"
+        "image": "https://i.ibb.co/184Nyzf/car-5.png",
+        "status": "Available"
     },
     {
         "name": "Porsche 911 Carrera",
@@ -63,7 +68,8 @@
         "fuel": "Petrol",
         "type": "Sport",
         "color": "Green",
-        "image": "https://i.ibb.co/wwjq0kC/car-6.png"
+        "image": "https://i.ibb.co/wwjq0kC/car-6.png",
+        "status": "Available"
     },
     {
         "name": "Jensen Interceptor",
@@ -74,7 +80,8 @@
         "fuel": "Petrol",
         "type": "Sport",
         "color": "Red",
-        "image": "https://i.ibb.co/KLr3YCB/car-7.png"
+        "image": "https://i.ibb.co/KLr3YCB/car-7.png",
+        "status": "Available"
     },
     {
         "name": "Lamborghini Huracan",
@@ -85,7 +92,8 @@
         "fuel": "Petrol",
         "type": "Sport",
         "color": "Chocolate",
-        "image": "https://i.ibb.co/VTZnZ9T/car-8.png"
+        "image": "https://i.ibb.co/VTZnZ9T/car-8.png",
+        "status": "Available"
     },
     {
         "name": "Ferrari 812 Superfast",
@@ -96,7 +104,8 @@
         "fuel": "Petrol",
         "type": "Sport",
         "color": "Black",
-        "image": "https://i.ibb.co/CVRnn0Z/car-9.png"
+        "image": "https://i.ibb.co/CVRnn0Z/car-9.png",
+        "status": "Available"
     },
     {
         "name": "Jeep Gladiator",
@@ -107,7 +116,8 @@
         "fuel": "Petrol",
         "type": "Sport",
         "color": "Silver",
-        "image": "https://i.ibb.co/VpnZf63/car-10.png"
+        "image": "https://i.ibb.co/VpnZf63/car-10.png",
+        "status": "Available"
     },
     {
         "name": "Land Rover Defender",
@@ -118,7 +128,8 @@
         "fuel": "Petrol",
         "type": "Sport",
         "color": "Black",
-        "image": "https://i.ibb.co/vL2F23c/car-11.png"
+        "image": "https://i.ibb.co/vL2F23c/car-11.png",
+        "status": "Available"
     },
     {
         "name": "Rolls-Royce Wraith",
@@ -129,7 +140,8 @@
         "fuel": "Petrol",
         "type": "Sport",
         "color": "Ash",
-        "image": "https://i.ibb.co/F6kf8bz/car-12.png"
+        "image": "https://i.ibb.co/F6kf8bz/car-12.png",
+        "status": "Available"
     },
     {
         "name": "Suzuki Samurai",
@@ -140,7 +152,8 @@
         "fuel": "Petrol",
         "type": "Sport",
         "color": "White",
-        "image": "https://i.ibb.co/z7c0j50/car-13.png"
+        "image": "https://i.ibb.co/z7c0j50/car-13.png",
+        "status": "Available"
     },
     {
         "name": "Volkswagen Beetle",
@@ -151,7 +164,8 @@
         "fuel": "Petrol",
         "type": "Sport",
         "color": "Black",
-        "image": "https://i.ibb.co/MgDCRxs/car-14.png"
+        "image": "https://i.ibb.co/MgDCRxs/car-14.png",
+        "status": "Available"
     },
     {
         "name": "Dodge Viper",
@@ -162,7 +176,8 @@
         "fuel": "Petrol",
         "type": "Sport",
         "color": "Yellow",
-        "image": "https://i.ibb.co/cXjy55N/car-15.png"
+        "image": "https://i.ibb.co/cXjy55N/car-15.png",
+        "status": "Available"
     },
     {
         "name": "McLaren Senna",
@@ -173,7 +188,8 @@
         "fuel": "Petrol",
         "type": "Sport",
         "color": "White",
-        "image": "https://i.ibb.co/Ksby1w2/car-16.png"
+        "image": "https://i.ibb.co/Ksby1w2/car-16.png",
+        "status": "Available"
     },
     {
         "name": "Ford Cortina",
@@ -184,6 +200,7 @@
         "fuel": "Petrol",
         "type": "Sport",
         "color": "Yellow",
-        "image": "https://i.ibb.co/WKXGJjt/car-17.png"
+        "image": "https://i.ibb.co/WKXGJjt/car-17.png",
+        "status": "Available"
     }
 ]
