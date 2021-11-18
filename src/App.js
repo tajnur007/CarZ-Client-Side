@@ -43,9 +43,9 @@ function App() {
             <Route exact path="/register">
               <Register />
             </Route>
-            <Route exact path="/purchase">
+            <PrivateRoute exact path="/purchase/:productId">
               <Purchase />
-            </Route>
+            </PrivateRoute>
             <PrivateRoute exact path="/dashboard">
               <Dashboard />
             </PrivateRoute>
