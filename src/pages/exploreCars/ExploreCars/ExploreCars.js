@@ -5,13 +5,15 @@ import CarCard from '../../shared/CarCard/CarCard';
 
 const ExploreCars = () => {
     const [cars, setCars] = useState([]);
+    const [filteredCars, setFilteredCars] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:7007/products')
             .then(resp => resp.json())
             .then(data => setCars(data))
 
-    }, []);
+        setFilteredCars(cars.filter(car => car.status === 'Available'));
+    }, [cars]);
 
 
     return (
@@ -24,8 +26,7 @@ const ExploreCars = () => {
             <div className="container">
                 <Row xs={1} md={3} lg={3} className="g-4">
                     {
-                        // cars[0]?.name && cars.map(value => <CarCard key="" value={cars[value]}></CarCard>)
-                        cars[0]?.name && cars.map(data => <CarCard key="" value={data}></CarCard>)
+                        filteredCars.map(data => <CarCard key="" value={data}></CarCard>)
                     }
                 </Row>
             </div>
