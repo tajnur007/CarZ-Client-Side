@@ -79,8 +79,8 @@ const AddProduct = () => {
                     </div>
 
                     {/* Driving Mode  */}
-                    <div class="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
-                        <select class="form-select w-98" id="floatingSelectGrid" ref={modeRef}>
+                    <div className="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
+                        <select className="form-select w-98" id="floatingSelectGrid" ref={modeRef}>
                             <option selected> --- Select One --- </option>
                             <option value="Auto">Auto</option>
                             <option value="Manual">Manual</option>
@@ -96,8 +96,8 @@ const AddProduct = () => {
                     </div>
 
                     {/* Fuel Type  */}
-                    <div class="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
-                        <select class="form-select w-98" id="floatingSelectGrid" ref={fuelRef}>
+                    <div className="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
+                        <select className="form-select w-98" id="floatingSelectGrid" ref={fuelRef}>
                             <option selected> --- Select One --- </option>
                             <option value="Petrol">Petrol</option>
                             <option value="Octane">Octane</option>
@@ -107,8 +107,8 @@ const AddProduct = () => {
                     </div>
 
                     {/* Car Type  */}
-                    <div class="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
-                        <select class="form-select w-98" id="floatingSelectGrid" ref={typeRef}>
+                    <div className="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
+                        <select className="form-select w-98" id="floatingSelectGrid" ref={typeRef}>
                             <option selected> --- Select One --- </option>
                             <option value="Sports">Sports</option>
                             <option value="Hatchback">Hatchback</option>
@@ -134,8 +134,8 @@ const AddProduct = () => {
                     </div>
 
                     {/* Available Status  */}
-                    <div class="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
-                        <select class="form-select w-98" id="floatingSelectGrid" ref={statusRef}>
+                    <div className="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
+                        <select className="form-select w-98" id="floatingSelectGrid" ref={statusRef}>
                             <option selected> --- Select One --- </option>
                             <option value="Available">Available</option>
                             <option value="Not Available">Not Available</option>
