@@ -1,11 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import useAuth from '../../../hooks/useAuth';
 import { useParams } from 'react-router-dom';
+import { useHistory } from 'react-router';
 
 const Purchase = () => {
     const { user } = useAuth();
     const { productId } = useParams();
     const [car, setCar] = useState({});
+    const history = useHistory();
+
+    const productDetailsRef = useRef();
+    const mobileRef = useRef();
+    const addressRef = useRef();
 
     const [subTotal, setSubTotal] = useState(0);
     const [shipping, setShipping] = useState(0);
@@ -26,13 +32,43 @@ const Purchase = () => {
         setGrandTotal(subTotal + shipping + tax);
     }, [car.price, subTotal, shipping, tax]);
 
+    // Sending Order Info to Database 
+    const handleCheckout = () => {
+        const newOrder = {
+            productId: `${productId}`,
+            productDetails: `${productDetailsRef.current.value}`,
+            quantity: 1,
+            receiverEmail: `${user.email}`,
+            receiverName: `${user.displayName}`,
+            mobile: `${mobileRef.current.value}`,
+            address: `${addressRef.current.value}`,
+            status: 'Pending'
+        };
+        const idToken = localStorage.getItem('idToken');
+        fetch(`http://localhost:7007/addOrder?email=${user.email}`, {
+            method: 'POST',
+            headers: {
+                'authorization': `Bearer ${idToken}`,
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newOrder)
+        })
+            .then(resp => resp.json())
+            .then(data => {
+                if (data.insertedId) {
+                    alert('Product successfully added.');
+                    history.push('/my-orders');
+                }
+            })
+    }
+
     return (
         <div className="container my-5">
             <h1 className="txt-primary mb-3">SHOPPING CART</h1>
             <div className="d-flex">
                 <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 px-4">
                     <div className="form-floating mb-3 mx-auto">
-                        <input type="text" className="form-control" id="floatingInput" placeholder=" " value={`Name & Model: ${car.name}, Mode: ${car.mode}, Year: ${car.year}, Type: ${car.type}, Color: ${car.color}`} readOnly />
+                        <input type="text" ref={productDetailsRef} className="form-control" id="floatingInput" placeholder=" " value={`Name & Model: ${car.name}, Mode: ${car.mode}, Year: ${car.year}, Type: ${car.type}, Color: ${car.color}`} readOnly />
                         <label htmlFor="floatingInput">Product Details</label>
                     </div>
                     <div className="form-floating mb-3 mx-auto">
@@ -48,11 +84,11 @@ const Purchase = () => {
                         <label htmlFor="floatingInput">Receiver Name</label>
                     </div>
                     <div className="form-floating mb-3 mx-auto">
-                        <input type="text" className="form-control" id="floatingInput" placeholder=" " />
+                        <input type="text" ref={mobileRef} className="form-control" id="floatingInput" placeholder=" " />
                         <label htmlFor="floatingInput">Mobile</label>
                     </div>
                     <div className="form-floating mb-3 mx-auto">
-                        <textarea className="form-control" placeholder=" " id="floatingTextarea2" style={{ height: "130px" }}></textarea>
+                        <textarea ref={addressRef} className="form-control" placeholder=" " id="floatingTextarea2" style={{ height: "130px" }}></textarea>
                         <label for="floatingTextarea2">Address</label>
                     </div>
 
@@ -80,7 +116,7 @@ const Purchase = () => {
                         <p>${grandTotal} </p>
                     </div>
                     <div className="mt-4">
-                        <button className="btn btn-success">PROCEED TO CHECKOUT</button>
+                        <button onClick={handleCheckout} className="btn btn-success">PROCEED TO CHECKOUT</button>
                     </div>
                 </div>
             </div>
