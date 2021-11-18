@@ -63,7 +63,7 @@ const ManageProductsData = (props) => {
             <td>{name}</td>
             <td>
                 <select className="form-select" id="floatingSelectGrid" ref={statusRef}>
-                    <option selected> {status} </option>
+                    <option defaultValue> {status} </option>
                     {
                         status === 'Available' ? '' : <option value="Available">Available</option>
                     }
