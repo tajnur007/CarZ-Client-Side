@@ -30,15 +30,16 @@ const AddProduct = () => {
         const color = colorRef.current.value;
         const image = imageRef.current.value;
 
+        // Sending Product Info to Database 
         const newCar = { name, price, speed, mode, year, fuel, type, color, image };
-        const token = { email: user.accessToken };
-        const data = { token, newCar };
-        fetch('http://localhost:7007/addProduct', {
+        const idToken = localStorage.getItem('idToken');
+        fetch(`http://localhost:7007/addProduct?email=${user.email}`, {
             method: 'POST',
             headers: {
+                'authorization': `Bearer ${idToken}`,
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(newCar)
         })
             .then(resp => resp.json())
             .then(data => {
@@ -48,6 +49,7 @@ const AddProduct = () => {
                 }
             })
     }
+
 
     return (
         <div className="container my-5">
