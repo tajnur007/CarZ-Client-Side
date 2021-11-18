@@ -17,9 +17,8 @@ const AddProduct = () => {
     const imageRef = useRef();
     const statusRef = useRef();
 
-    console.log(user);
-
-    const handelAddProduct = e => {
+    // Handle Add Product 
+    const handleAddProduct = e => {
         e.preventDefault();
         const name = nameRef.current.value;
         const price = priceRef.current.value;
@@ -63,53 +62,53 @@ const AddProduct = () => {
                     {/* Car Name and Model  */}
                     <div className="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
                         <input type="text" className="form-control w-98" id="floatingInput" placeholder=" " ref={nameRef} />
-                        <label for="floatingInput">Car Name and Model</label>
+                        <label htmlFor="floatingInput">Car Name and Model</label>
                     </div>
 
                     {/* Car Price  */}
                     <div className="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
                         <input type="number" className="form-control w-98" id="floatingInput" placeholder=" " ref={priceRef} />
-                        <label for="floatingInput">Price</label>
+                        <label htmlFor="floatingInput">Price</label>
                     </div>
 
                     {/* Car Speed  */}
                     <div className="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
                         <input type="number" className="form-control w-98" id="floatingInput" placeholder=" " ref={speedRef} />
-                        <label for="floatingInput">Speed/kmph</label>
+                        <label htmlFor="floatingInput">Speed/kmph</label>
                     </div>
 
                     {/* Driving Mode  */}
                     <div className="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
                         <select className="form-select w-98" id="floatingSelectGrid" ref={modeRef}>
-                            <option selected> --- Select One --- </option>
+                            <option defaultValue> --- Select One --- </option>
                             <option value="Auto">Auto</option>
                             <option value="Manual">Manual</option>
                             <option value="Both">Both</option>
                         </select>
-                        <label for="floatingSelectGrid">Driving Mode</label>
+                        <label htmlFor="floatingSelectGrid">Driving Mode</label>
                     </div>
 
                     {/* Release Year  */}
                     <div className="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
                         <input type="number" className="form-control w-98" id="floatingInput" placeholder=" " ref={yearRef} />
-                        <label for="floatingInput">Release Year</label>
+                        <label htmlFor="floatingInput">Release Year</label>
                     </div>
 
                     {/* Fuel Type  */}
                     <div className="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
                         <select className="form-select w-98" id="floatingSelectGrid" ref={fuelRef}>
-                            <option selected> --- Select One --- </option>
+                            <option defaultValue> --- Select One --- </option>
                             <option value="Petrol">Petrol</option>
                             <option value="Octane">Octane</option>
                             <option value="Both">Both</option>
                         </select>
-                        <label for="floatingSelectGrid">Fuel Type</label>
+                        <label htmlFor="floatingSelectGrid">Fuel Type</label>
                     </div>
 
                     {/* Car Type  */}
                     <div className="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
                         <select className="form-select w-98" id="floatingSelectGrid" ref={typeRef}>
-                            <option selected> --- Select One --- </option>
+                            <option defaultValue> --- Select One --- </option>
                             <option value="Sports">Sports</option>
                             <option value="Hatchback">Hatchback</option>
                             <option value="Sedan">Sedan</option>
@@ -118,35 +117,35 @@ const AddProduct = () => {
                             <option value="Crossover">Crossover</option>
                             <option value="Convertible">Convertible</option>
                         </select>
-                        <label for="floatingSelectGrid">Car Type</label>
+                        <label htmlFor="floatingSelectGrid">Car Type</label>
                     </div>
 
                     {/* Car Color  */}
                     <div className="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
                         <input type="text" className="form-control w-98" id="floatingInput" placeholder=" " ref={colorRef} />
-                        <label for="floatingInput">Color</label>
+                        <label htmlFor="floatingInput">Color</label>
                     </div>
 
                     {/* Image Link  */}
                     <div className="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
                         <input type="text" className="form-control w-98" id="floatingInput" placeholder=" " ref={imageRef} />
-                        <label for="floatingInput">Car Image Link</label>
+                        <label htmlFor="floatingInput">Car Image Link</label>
                     </div>
 
                     {/* Available Status  */}
                     <div className="form-floating mb-3 col-12 col-sm-12 col-md-6 col-lg-6 ">
                         <select className="form-select w-98" id="floatingSelectGrid" ref={statusRef}>
-                            <option selected> --- Select One --- </option>
+                            <option defaultValue> --- Select One --- </option>
                             <option value="Available">Available</option>
                             <option value="Not Available">Not Available</option>
                         </select>
-                        <label for="floatingSelectGrid">Available Status</label>
+                        <label htmlFor="floatingSelectGrid">Available Status</label>
                     </div>
                 </div>
 
                 {/* Submit Button  */}
                 <div>
-                    <button onClick={handelAddProduct} type="submit" className="btn-1 py-2">Add Product</button>
+                    <button onClick={handleAddProduct} type="submit" className="btn-1 py-2">Add Product</button>
                 </div>
             </form>
 
