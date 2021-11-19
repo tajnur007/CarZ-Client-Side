@@ -47,7 +47,7 @@ const Login = () => {
                 const name = result.user.displayName;
                 const email = result.user.email;
                 const newUser = { name, email };
-                fetch('http://localhost:7007/users', {
+                fetch('https://young-taiga-83856.herokuapp.com/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

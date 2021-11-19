@@ -5,7 +5,7 @@ const ManageProducts = () => {
     const [cars, setCars] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:7007/products')
+        fetch('https://young-taiga-83856.herokuapp.com/products')
             .then(resp => resp.json())
             .then(data => setCars(data))
 

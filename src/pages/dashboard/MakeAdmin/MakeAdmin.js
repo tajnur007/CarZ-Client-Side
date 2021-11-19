@@ -7,7 +7,7 @@ const MakeAdmin = () => {
 
     // Handel Make Admin Method 
     const handelMakeAdmin = () => {
-        const url = `http://localhost:7007/makeAdmin?email=${user.email}`;
+        const url = `https://young-taiga-83856.herokuapp.com/makeAdmin?email=${user.email}`;
         const idToken = localStorage.getItem('idToken');
         const newAdminEmail = { email: `${adminEmailRef.current.value}` };
         fetch(url, {

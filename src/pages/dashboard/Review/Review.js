@@ -14,7 +14,7 @@ const Review = () => {
             image: `${photoURL}`
         };
         const idToken = localStorage.getItem('idToken');
-        fetch(`http://localhost:7007/addReview?email=${user.email}`, {
+        fetch(`https://young-taiga-83856.herokuapp.com/addReview?email=${user.email}`, {
             method: 'POST',
             headers: {
                 'authorization': `Bearer ${idToken}`,

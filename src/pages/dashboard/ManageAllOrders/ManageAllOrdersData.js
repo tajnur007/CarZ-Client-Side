@@ -8,7 +8,7 @@ const ManageAllOrdersData = (props) => {
 
     // Handle Order Update Method 
     const handleUpdate = () => {
-        const url = `http://localhost:7007/updateOrder?email=${user.email}`;
+        const url = `https://young-taiga-83856.herokuapp.com/updateOrder?email=${user.email}`;
         const idToken = localStorage.getItem('idToken');
         const newOrder = { ...props.value };
         newOrder.status = `${statusRef.current.value}`;

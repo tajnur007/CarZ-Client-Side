@@ -14,7 +14,7 @@ const ManageProductsData = (props) => {
 
     // Handle Update Method 
     const handleUpdate = () => {
-        const url = `http://localhost:7007/updateProduct?email=${user.email}`;
+        const url = `https://young-taiga-83856.herokuapp.com/updateProduct?email=${user.email}`;
         const idToken = localStorage.getItem('idToken');
         const newCar = { ...props.value };
         newCar.status = statusRef.current.value;
@@ -37,7 +37,7 @@ const ManageProductsData = (props) => {
 
     // Handle Delete Method 
     const handleDelete = () => {
-        const url = `http://localhost:7007/deleteProduct?email=${user.email}`;
+        const url = `https://young-taiga-83856.herokuapp.com/deleteProduct?email=${user.email}`;
         const idToken = localStorage.getItem('idToken');
         const car = { ...props.value };
         fetch(url, {

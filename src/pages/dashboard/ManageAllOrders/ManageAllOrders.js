@@ -7,7 +7,7 @@ const ManageAllOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:7007/orders?email=${user.email}`;
+        const url = `https://young-taiga-83856.herokuapp.com/orders?email=${user.email}`;
         const idToken = localStorage.getItem('idToken');
         fetch(url, {
             method: 'GET',

@@ -8,7 +8,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         const idToken = localStorage.getItem('idToken');
-        fetch(`http://localhost:7007/myOrders?email=${user.email}`, {
+        fetch(`https://young-taiga-83856.herokuapp.com/myOrders?email=${user.email}`, {
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${idToken}`,

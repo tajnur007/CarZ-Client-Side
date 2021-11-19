@@ -19,7 +19,7 @@ const Purchase = () => {
     const [grandTotal, setGrandTotal] = useState(0);
 
     useEffect(() => {
-        fetch(`http://localhost:7007/products/${productId}`)
+        fetch(`https://young-taiga-83856.herokuapp.com/products/${productId}`)
             .then(resp => resp.json())
             .then(data => setCar(data))
 
@@ -45,7 +45,7 @@ const Purchase = () => {
             status: 'Pending'
         };
         const idToken = localStorage.getItem('idToken');
-        fetch(`http://localhost:7007/addOrder?email=${user.email}`, {
+        fetch(`https://young-taiga-83856.herokuapp.com/addOrder?email=${user.email}`, {
             method: 'POST',
             headers: {
                 'authorization': `Bearer ${idToken}`,

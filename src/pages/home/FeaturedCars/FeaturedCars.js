@@ -7,7 +7,7 @@ const FeaturedCars = () => {
     const myarr = [0, 1, 2, 3, 4, 5];
 
     useEffect(() => {
-        fetch('http://localhost:7007/products')
+        fetch('https://young-taiga-83856.herokuapp.com/products')
             .then(resp => resp.json())
             .then(data => setCars(data))
 

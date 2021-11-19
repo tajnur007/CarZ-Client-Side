@@ -16,7 +16,7 @@ const MyOrdersData = (props) => {
 
     // Handle Order Cancel Method 
     const handleCancel = () => {
-        const url = `http://localhost:7007/updateOrder?email=${user.email}`;
+        const url = `https://young-taiga-83856.herokuapp.com/updateOrder?email=${user.email}`;
         const idToken = localStorage.getItem('idToken');
         const newOrder = { ...props.value };
         newOrder.status = 'Canceled';
@@ -39,7 +39,7 @@ const MyOrdersData = (props) => {
 
     // Handle Order Delete Method 
     const handleDelete = () => {
-        const url = `http://localhost:7007/deleteOrder?email=${user.email}`;
+        const url = `https://young-taiga-83856.herokuapp.com/deleteOrder?email=${user.email}`;
         const idToken = localStorage.getItem('idToken');
         const order = { ...props.value };
         fetch(url, {

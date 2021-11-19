@@ -34,7 +34,7 @@ const AddProduct = () => {
         // Sending Product Info to Database 
         const newCar = { name, price, speed, mode, year, fuel, type, color, image, status };
         const idToken = localStorage.getItem('idToken');
-        fetch(`http://localhost:7007/addProduct?email=${user.email}`, {
+        fetch(`https://young-taiga-83856.herokuapp.com/addProduct?email=${user.email}`, {
             method: 'POST',
             headers: {
                 'authorization': `Bearer ${idToken}`,

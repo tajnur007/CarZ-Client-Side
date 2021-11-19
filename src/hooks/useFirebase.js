@@ -29,7 +29,7 @@ const useFirebase = () => {
     // Checking The User Is An Admin Or Not 
     useEffect(() => {
         const data = { email: user.email };
-        fetch('http://localhost:7007/isAdmin', {
+        fetch('https://young-taiga-83856.herokuapp.com/isAdmin', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -67,7 +67,7 @@ const useFirebase = () => {
 
                 // User Info Send to Database 
                 const newUser = { name, email };
-                fetch('http://localhost:7007/users', {
+                fetch('https://young-taiga-83856.herokuapp.com/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
