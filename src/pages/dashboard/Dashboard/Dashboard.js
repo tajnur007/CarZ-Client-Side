@@ -14,25 +14,19 @@ const Dashboard = () => {
                 {/* Normal User Menu  */}
                 <div>
                     <p className="dashboard-item">
-                        {
-                            !isAdmin ? <Link className="dashboard-item-link" to="/pay" >
-                                Pay
-                            </Link> : ''
-                        }
+                        <Link className="dashboard-item-link" to="/pay" >
+                            Pay
+                        </Link>
                     </p>
                     <p className="dashboard-item">
-                        {
-                            !isAdmin ? <Link className="dashboard-item-link" to="/my-orders" >
-                                My Orders
-                            </Link> : ''
-                        }
+                        <Link className="dashboard-item-link" to="/my-orders" >
+                            My Orders
+                        </Link>
                     </p>
                     <p className="dashboard-item">
-                        {
-                            !isAdmin ? <Link className="dashboard-item-link" to="/review" >
-                                Review
-                            </Link> : ''
-                        }
+                        <Link className="dashboard-item-link" to="/review" >
+                            Review
+                        </Link>
                     </p>
                 </div>
 
