@@ -20,6 +20,7 @@ import PrivateRoute from './pages/shared/PrivateRoute/PrivateRoute';
 import AuthProvider from './contexts/AuthProvider';
 import AdminPrivateRoute from './pages/shared/AdminPrivateRoute/AdminPrivateRoute';
 import Purchase from './pages/purchase/Purchase/Purchase';
+import NotFound from './pages/notFound/NotFound/NotFound';
 
 function App() {
   return (
@@ -70,6 +71,9 @@ function App() {
             <AdminPrivateRoute exact path="/manage-products">
               <ManageProducts />
             </AdminPrivateRoute>
+            <Route path="*">
+              <NotFound />
+            </Route>
           </Switch>
           <Footer />
         </Router>
