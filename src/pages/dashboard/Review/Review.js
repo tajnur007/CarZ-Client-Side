@@ -1,15 +1,45 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import useAuth from '../../../hooks/useAuth';
 
 const Review = () => {
+    const { user } = useAuth();
+    const reviewRef = useRef();
+    const photoURL = user.photoURL || 'http://bpsc.teletalk.com.bd/ncad/images/nobody.png';
+
+    // Sending Review to Database 
+    const handleReview = () => {
+        const newReview = {
+            name: `${user.displayName}`,
+            review: `${reviewRef.current.value}`,
+            image: `${photoURL}`
+        };
+        const idToken = localStorage.getItem('idToken');
+        fetch(`http://localhost:7007/addReview?email=${user.email}`, {
+            method: 'POST',
+            headers: {
+                'authorization': `Bearer ${idToken}`,
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newReview)
+        })
+            .then(resp => resp.json())
+            .then(data => {
+                if (data.insertedId) {
+                    alert('Your valueable review successfully recorded.');
+                    reviewRef.current.value = '';
+                }
+            })
+    }
+
     return (
         <div className="container my-5">
             <h1 className="txt-primary pb-3">MY REVIEW</h1>
             <div className="form-floating w-75 mx-auto">
-                <textarea className="form-control" placeholder="Share your experience with us" id="floatingTextarea2" style={{ height: "150px" }} ></textarea>
+                <textarea ref={reviewRef} className="form-control" placeholder="Share your experience with us" id="floatingTextarea2" style={{ height: "150px" }} ></textarea>
                 <label for="floatingTextarea2">Share your experience with us</label>
             </div>
             <div>
-                <button className="btn-1 my-3 py-2">Submit Review</button>
+                <button onClick={handleReview} className="btn-1 my-3 py-2">Submit Review</button>
             </div>
         </div>
     );
