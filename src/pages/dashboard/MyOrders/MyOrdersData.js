@@ -39,7 +39,23 @@ const MyOrdersData = (props) => {
 
     // Handle Order Delete Method 
     const handleDelete = () => {
-
+        const url = `http://localhost:7007/deleteOrder?email=${user.email}`;
+        const idToken = localStorage.getItem('idToken');
+        const order = { ...props.value };
+        fetch(url, {
+            method: 'DELETE',
+            headers: {
+                'authorization': `Bearer ${idToken}`,
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+            .then(resp => resp.json())
+            .then(data => {
+                if (data.deletedCount === 1) {
+                    handleDeleteClose();
+                }
+            })
     }
 
     return (
