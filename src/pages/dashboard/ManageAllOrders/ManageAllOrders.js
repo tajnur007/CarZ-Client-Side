@@ -1,11 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import useAuth from '../../../hooks/useAuth';
+import ManageAllOrdersData from './ManageAllOrdersData';
 
 const ManageAllOrders = () => {
+    const { user } = useAuth();
+    const [orders, setOrders] = useState([]);
+
+    useEffect(() => {
+        const url = `http://localhost:7007/orders?email=${user.email}`;
+        const idToken = localStorage.getItem('idToken');
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'authorization': `Bearer ${idToken}`,
+                'content-type': 'application/json'
+            }
+        })
+            .then(resp => resp.json())
+            .then(data => setOrders(data))
+
+    }, [user.email]);
 
     return (
         <div className="container my-5">
             <h1 className="txt-primary pb-3">MANAGE ORDERS</h1>
-            <table class="table table-striped">
+            <table className="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">Product Details</th>
@@ -17,25 +36,9 @@ const ManageAllOrders = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Lambourgini</td>
-                        <td>1</td>
-                        <td>Kazi Tajnur Islam</td>
-                        <td>Gazipur, Bangladesh</td>
-                        <td>
-                            <select class="form-select form-select-sm" id="floatingSelectGrid">
-                                <option className="text-muted" selected> --- Select One --- </option>
-                                <option className="text-dark" value="Pending">Pending</option>
-                                <option className="text-warning" value="Processing">Processing</option>
-                                <option className="text-primary" value="Shipped">Shipped</option>
-                                <option className="text-success" value="Delivered">Delivered</option>
-                                <option className="text-danger" value="Cancel">Cancel</option>
-                            </select>
-                        </td>
-                        <td>
-                            <button className="btn btn-success" >Update</button>
-                        </td>
-                    </tr>
+                    {
+                        orders.map(order => <ManageAllOrdersData key={order._id} value={order} />)
+                    }
                 </tbody>
             </table>
         </div>
