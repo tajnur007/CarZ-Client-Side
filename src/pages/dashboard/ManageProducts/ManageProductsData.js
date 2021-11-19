@@ -41,7 +41,7 @@ const ManageProductsData = (props) => {
         const idToken = localStorage.getItem('idToken');
         const car = { ...props.value };
         fetch(url, {
-            method: 'PUT',
+            method: 'DELETE',
             headers: {
                 'authorization': `Bearer ${idToken}`,
                 'content-type': 'application/json'
