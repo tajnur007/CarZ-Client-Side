@@ -16,7 +16,7 @@ const FeaturedCars = () => {
     return (
         <div className="container my-5 pb-5">
             {/* Section Heading  */}
-            <h1>FEATURED CARS </h1>
+            <h1 className="txt-primary">FEATURED CARS </h1>
             <h3 className="pb-4">We provide the best cars in the world. Here are some special pick for you</h3>
 
             <Row xs={1} md={3} lg={3} className="g-4">

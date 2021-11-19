@@ -7,7 +7,7 @@ import { faShieldAlt, faHandshake, faHandHoldingUsd, faHeadset } from '@fortawes
 const Advantages = () => {
     return (
         <div className="container mb-5">
-            <h1>OUR ADVANTAGES </h1>
+            <h1 className="txt-primary">OUR ADVANTAGES </h1>
             <h3 className="pb-3">Why you should buy from us? We provide you following features.</h3>
 
             <Row xs={1} md={3} lg={4} className="g-5">

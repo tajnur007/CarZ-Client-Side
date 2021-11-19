@@ -24,7 +24,7 @@ const ExploreCars = () => {
             <div>
                 <img src={bannerImage} alt="" className="img-fluid w-100" />
             </div>
-            <h1 className="mt-5 mb-3">AVAILABLE CARS</h1>
+            <h1 className="mt-5 mb-5 txt-primary">AVAILABLE CARS</h1>
 
             <div className="container">
                 <Row xs={1} md={3} lg={3} className="g-4">
