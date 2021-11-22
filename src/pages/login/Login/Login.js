@@ -6,9 +6,10 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import Loading from '../../shared/Loading/Loading';
 
 const Login = () => {
-    const { setUser, errorMsg, setErrorMsg, login, googleLogin } = useAuth();
+    const { setUser, errorMsg, setErrorMsg, login, googleLogin, isLoading, setIsLoading } = useAuth();
 
     let history = useHistory();
     const location = useLocation();
@@ -20,6 +21,7 @@ const Login = () => {
 
     // Method for Email-Password Login
     const handleEmailPasswordLogin = e => {
+        setIsLoading(true);
         e.preventDefault();
 
         login(emailRef.current.value, passwordRef.current.value)
@@ -29,13 +31,15 @@ const Login = () => {
             })
             .catch((error) => {
                 setErrorMsg(error.message);
-            });
+            })
+            .finally(() => setIsLoading(false));
 
         formRef.current.reset();
     }
 
     // Method for Google Login
     const handleGoogleLogin = e => {
+        setIsLoading(true);
         e.preventDefault();
 
         googleLogin()
@@ -59,7 +63,12 @@ const Login = () => {
                 history.push(redirect_uri);
             }).catch((error) => {
                 setErrorMsg(error.message);
-            });
+            })
+            .finally(() => setIsLoading(false));
+    }
+
+    if (isLoading) {
+        return <Loading />
     }
 
     return (
