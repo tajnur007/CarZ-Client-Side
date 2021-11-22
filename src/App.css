@@ -64,3 +64,13 @@
 .txt-primary:hover {
   color: var(--color-primary);
 }
+
+.fadeIn {animation: .5s linear 0s 1 FadeIn;}
+@keyframes FadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+}

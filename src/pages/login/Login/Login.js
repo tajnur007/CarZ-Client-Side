@@ -72,7 +72,7 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className="fadeIn">
             <div className="container container--mini my-5">
                 {/* Company Logo  */}
                 <img className="d-block mx-auto mt-5 w-25" src={companyLogo} alt="" />

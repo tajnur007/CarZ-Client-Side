@@ -63,7 +63,7 @@ const Purchase = () => {
     }
 
     return (
-        <div className="container my-5">
+        <div className="container my-5 fadeIn">
             <h1 className="txt-primary mb-3">SHOPPING CART</h1>
             <div className="d-flex">
                 <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 px-4">

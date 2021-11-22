@@ -8,7 +8,7 @@ const Dashboard = () => {
     const { user, isAdmin, logout } = useAuth();
 
     return (
-        <div className="dashboard-container d-flex">
+        <div className="dashboard-container d-flex fadeIn">
             {/* Side Menu  */}
             <div className="col-3 p-3 pt-5 side-menu border-end">
                 {/* Normal User Menu  */}

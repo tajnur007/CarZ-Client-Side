@@ -6,7 +6,7 @@ import { faMapMarkerAlt, faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-
 
 const Contact = () => {
     return (
-        <div>
+        <div className="fadeIn">
             {/* Banner Image  */}
             <div>
                 <img className="img-fluid" src={bannerImage} alt="" />

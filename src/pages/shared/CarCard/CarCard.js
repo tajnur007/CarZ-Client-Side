@@ -8,7 +8,7 @@ const CarCard = (props) => {
     const { _id, name, price, speed, mode, year, fuel, type, color, image } = props.value;
 
     return (
-        <div className="car-box">
+        <div className="car-box fadeIn">
             <div className="car-thumbnail-photo">
                 <img src={image} alt="" className="img-fluid w-100 rad" />
             </div>

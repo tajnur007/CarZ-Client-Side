@@ -6,12 +6,12 @@ import Reviews from '../Reviews/Reviews';
 
 const Home = () => {
     return (
-        <>
+        <div className="fadeIn">
             <CauroselBanner />
             <FeaturedCars />
             <Advantages />
             <Reviews />
-        </>
+        </div>
     );
 };
 

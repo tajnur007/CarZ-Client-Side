@@ -12,7 +12,7 @@ const ManageProducts = () => {
     }, []);
 
     return (
-        <div className="container my-5">
+        <div className="container my-5 fadeIn">
             <h1 className="txt-primary pb-3">MANAGE PRODUCTS</h1>
             <table className="table table-striped">
                 <thead>

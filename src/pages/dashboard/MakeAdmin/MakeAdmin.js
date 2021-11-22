@@ -28,7 +28,7 @@ const MakeAdmin = () => {
     }
 
     return (
-        <div className="container my-5">
+        <div className="container my-5 fadeIn">
             <h1 className="txt-primary pb-3">MAKE AN ADMIN</h1>
             <h4 className="text-success">Give an email address to make an admin</h4>
             <div className="form-floating mb-3 w-50 mx-auto">

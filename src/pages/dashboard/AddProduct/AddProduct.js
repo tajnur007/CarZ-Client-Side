@@ -53,7 +53,7 @@ const AddProduct = () => {
 
 
     return (
-        <div className="container my-5">
+        <div className="container my-5 fadeIn">
             <h1 className="txt-primary pb-3">ADD A PRODUCT</h1>
 
             <form ref={formRef}>

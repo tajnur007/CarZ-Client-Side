@@ -22,7 +22,7 @@ const MyOrders = () => {
     console.log(orders);
 
     return (
-        <div className="container my-5">
+        <div className="container my-5 fadeIn">
             <h1 className="txt-primary pb-3">MY ORDERS</h1>
             <table className="table table-striped">
                 <thead>

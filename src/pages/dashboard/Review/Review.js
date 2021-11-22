@@ -32,7 +32,7 @@ const Review = () => {
     }
 
     return (
-        <div className="container my-5">
+        <div className="container my-5 fadeIn">
             <h1 className="txt-primary pb-3">MY REVIEW</h1>
             <div className="form-floating w-75 mx-auto">
                 <textarea ref={reviewRef} className="form-control" placeholder="Share your experience with us" id="floatingTextarea2" style={{ height: "150px" }} ></textarea>

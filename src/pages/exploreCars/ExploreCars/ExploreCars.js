@@ -20,7 +20,7 @@ const ExploreCars = () => {
 
 
     return (
-        <div className="mb-5">
+        <div className="mb-5 fadeIn">
             <div>
                 <img src={bannerImage} alt="" className="img-fluid w-100" />
             </div>
