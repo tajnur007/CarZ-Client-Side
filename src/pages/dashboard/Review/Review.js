@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Review = () => {
@@ -33,6 +34,9 @@ const Review = () => {
 
     return (
         <div className="container my-5 fadeIn">
+            <div className="text-start">
+                <Link to="/dashboard"> {`< Back to Dashboard`} </Link>
+            </div>
             <h1 className="txt-primary pb-3">MY REVIEW</h1>
             <div className="form-floating w-75 mx-auto">
                 <textarea ref={reviewRef} className="form-control" placeholder="Share your experience with us" id="floatingTextarea2" style={{ height: "150px" }} ></textarea>

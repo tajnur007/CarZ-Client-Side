@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import MyOrdersData from './MyOrdersData';
 
@@ -23,6 +24,9 @@ const MyOrders = () => {
 
     return (
         <div className="container my-5 fadeIn">
+            <div className="text-start">
+                <Link to="/dashboard"> {`< Back to Dashboard`} </Link>
+            </div>
             <h1 className="txt-primary pb-3">MY ORDERS</h1>
             <table className="table table-striped">
                 <thead>

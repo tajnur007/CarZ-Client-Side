@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const MakeAdmin = () => {
@@ -29,6 +30,9 @@ const MakeAdmin = () => {
 
     return (
         <div className="container my-5 fadeIn">
+            <div className="text-start">
+                <Link to="/dashboard"> {`< Back to Dashboard`} </Link>
+            </div>
             <h1 className="txt-primary pb-3">MAKE AN ADMIN</h1>
             <h4 className="text-success">Give an email address to make an admin</h4>
             <div className="form-floating mb-3 w-50 mx-auto">

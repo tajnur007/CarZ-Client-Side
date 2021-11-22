@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import ManageProductsData from './ManageProductsData';
 
 const ManageProducts = () => {
@@ -13,6 +14,9 @@ const ManageProducts = () => {
 
     return (
         <div className="container my-5 fadeIn">
+            <div className="text-start">
+                <Link to="/dashboard"> {`< Back to Dashboard`} </Link>
+            </div>
             <h1 className="txt-primary pb-3">MANAGE PRODUCTS</h1>
             <table className="table table-striped">
                 <thead>
